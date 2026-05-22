@@ -1,0 +1,74 @@
+/* ===== CONFIGURAÇÕES GERAIS DO BODY ===== */
+/* Define a altura do body como 100% da viewport (altura total da tela) */
+/* Ativa o Flexbox para organizar os elementos filhos */
+/* Centraliza horizontalmente (justify-content) e verticalmente (align-items) */
+/* Define fundo cinza escuro (#3b3bb3) para contraste com as letras brancas */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+}
+
+/* ===== CONFIGURAÇÕES DA LISTA (UL) ===== */
+/* Remove margens e preenchimentos padrão que o navegador aplica à lista */
+/* Ativa Flexbox para alinhar os itens da lista horizontalmente (lado a lado) */
+ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+/* ===== CONFIGURAÇÕES DE CADA ITEM DA LISTA (LI) ===== */
+/* Remove os marcadores de lista (as bolinhas padrão) */
+/* Define cor branca para as letras */
+/* Define tamanho da fonte como 100px (grande, para destaque) */
+/* Aplica negrito para deixar as letras mais grossas */
+/* Adiciona espaçamento de 10px entre as letras */
+/* Adiciona transição de 2 segundos para qualquer propriedade que mudar (ex: transform, opacity, filter) */
+ul li {
+    list-style: none;
+    color: white;
+    font-size: 100px;
+    font-weight: bold;
+    letter-spacing: 10px;
+    transition: 2s;
+}
+
+/* ===== EFEITO AO PASSAR O MOUSE SOBRE A LISTA ===== */
+/* Quando o mouse passa sobre a lista (ul:hover), aplica efeitos em TODOS os itens (li) */
+/* rotate(45deg) - Rotaciona cada letra em 45 graus */
+/* translateY(-200px) - Move cada letra 200 pixels para cima */
+/* opacity: 0 - Torna as letras completamente transparentes (invisíveis) */
+/* filter: blur(20px) - Aplica desfoque de 20 pixels (efeito de fumaça/borrão) */
+ul:hover li {
+    transform: rotate(45deg) translateY(-200px);
+    opacity: 0;
+    filter: blur(20px);
+}
+
+/* ===== DELAYS PROGRESSIVOS PARA EFEITO EM CASCATA ===== */
+/* nth-child(1) seleciona o primeiro item (letra '5') - delay 0 (começa imediatamente) */
+li:nth-child(1) {
+    transition-delay: 0;
+}
+/* nth-child(2) seleciona o segundo item (letra 'M') - delay 0.4 segundos */
+li:nth-child(2) {
+    transition-delay: 0.4s;
+}
+
+/* nth-child(3) seleciona o terceiro item (letra 'O') - delay 0.8 segundos */
+li:nth-child(3) {
+    transition-delay: 0.8s;
+}
+
+/* nth-child(4) seleciona o quarto item (letra 'K') - delay 1.2 segundos */
+li:nth-child(4) {
+    transition-delay: 1.2s;
+}
+
+/* nth-child(5) seleciona o quinto item (letra 'Y') - delay 1.6 segundos */
+/* Os delays progressivos criam o efeito de "fumaça em cascata", onde cada letra desaparece uma após a outra */
+li:nth-child(5) {
+    transition-delay: 1.6s;
+}
